@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Treats - Batter & Bloom</title>
+    <link rel="stylesheet" href="../styles/our-treats.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+    <div class="navbar-logo">
+        <a href="../index.html">
+        <h1>Batter & Bloom</h1>
+    </a>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="contact.html">Get In Touch</a></li>
+        <li><a href="./pages/our-treats.html">Our Treats</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="special-recipes.html">Special Recipes</a></li>
+    </ul>
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+    </button>
+    
+</nav>
+<section class="treats-intro">
+    <h2>Explore Our Freshly Baked Delights</h2>
+    <p>Browse our selection of handcrafted treats, each inspired by nature's beauty and made with the finest ingredients. Click on any category below to discover our full range of cookies, scones, muffins, and more.</p>
+</section>
+    <!-- Main Content for Our Treats Page -->
+    <section class="treats-categories">
+
+        <div class="categories-grid">
+            <div class="category" data-category="cookies">
+                <img src="../img/products/cookie-img.png" alt="Cookies">
+                <h3>Cookies</h3>
+            </div>
+            <div class="category" data-category="scones">
+                <img src="../img/products/lavender-scone-nobg.png" alt="Scones">
+                <h3>Scones</h3>
+            </div>
+            <div class="category" data-category="muffins">
+                <img src="../img/products/muffin-img.png" alt="Muffins">
+                <h3>Muffins</h3>
+            </div>
+            <div class="category" data-category="breads">
+                <img src="../img/products/elderflower-loaf-nobg.png" alt="Breads">
+                <h3>Breads</h3>
+            </div>
+            <!-- Add additional categories as needed -->
+        </div>
+    </section>
+
+<button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑ Back to Top</button>
+    <!-- JavaScript for Category Selection -->
+    <script>
+        // Handle Category Click to Load Specific Products
+        document.querySelectorAll('.category').forEach(category => {
+            category.addEventListener('click', () => {
+                const categoryType = category.getAttribute('data-category');
+                window.location.href = `our-treats.html?category=${categoryType}`;
+            });
+        });
+    </script>
+    <script>
+    // Check URL for category parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
+
+    // Placeholder Data for Products
+     const productsData = {
+        cookies: [
+            {
+                name: 'Chocolate Chip Cookie',
+                img: '../img/products/chocolate-chip.jpg',
+                description: 'A classic soft and chewy cookie with rich chocolate chips and a hint of vanilla. Perfectly balanced sweetness and a comforting, homemade flavor make this a timeless treat.',
+
+                calories: 220,
+                price: '$2.50',
+                ingredients: 'Flour, sugar, butter, chocolate chips, vanilla extract, eggs, baking soda',
+                features: 'Soft and chewy with a rich, melty chocolate flavor'
+            },
+            {
+                name: 'Oatmeal Raisin Cookie',
+                img: '../img/products/oatmeal-rasin.jpg',
+                description: 'A soft, chewy cookie packed with wholesome oats and naturally sweet raisins, with a hint of cinnamon for warmth. Perfect for a satisfying, homey bite.',
+                calories: 200,
+                price: '$2.00',
+                ingredients: 'Oats, flour, brown sugar, butter, raisins, cinnamon, baking soda',
+                features: 'High in fiber and naturally sweetened with juicy raisins'
+            },
+            {
+                name: 'Peanut Butter Cookie',
+                img: '../img/products/peanut-butter.jpg',
+                description: 'A melt-in-your-mouth cookie with bold peanut butter flavor and a touch of salt. This cookie is rich, crumbly, and perfect for peanut butter lovers.',
+                calories: 250,
+                price: '$2.25',
+                ingredients: 'Peanut butter, flour, sugar, butter, eggs, baking soda',
+                features: 'Rich peanut flavor with a perfect blend of crunch and softness'
+            },
+            {
+                name: 'Lavender Honey Lemon Cookie',
+                img: '../img/products/lavender-honey.webp',
+                description: 'A soft, buttery cookie infused with floral lavender and zesty lemon, sweetened with a touch of local honey.',
+                calories: 190,
+                price: '$2.50',
+                ingredients: 'Flour, butter, sugar, honey, lavender, lemon zest, eggs, baking powder',
+                features: 'Light and fragrant with floral notes and a touch of natural honey sweetness'
+            },
+            {
+                name: 'Rose Pistachio White Chocolate Cookie',
+                img: '../img/products/rose-white-chocolate-cookie.webp',
+                description: 'A blend of finely ground pistachios and creamy white chocolate chips, balanced by subtle rose essence.',
+                calories: 220,
+                price: '$2.75',
+                ingredients: 'Flour, pistachios, white chocolate chips, butter, rose water, sugar, eggs, baking powder',
+                features: 'Luxuriously sweet with nutty pistachio, creamy white chocolate, and a hint of floral rose'
+            },
+            {
+                name: 'Thyme & Sea Salt Caramel Shortbread',
+                img: '../img/products/thyme-seasalt.webp',
+                description: 'A unique shortbread infused with earthy thyme and a sprinkle of sea salt over a caramel drizzle.',
+                calories: 200,
+                price: '$2.60',
+                ingredients: 'Flour, butter, sugar, caramel, fresh thyme, sea salt, vanilla extract',
+                features: 'Perfectly balanced with earthy thyme, a touch of sea salt, and rich caramel'
+            },
+
+            
+        ],
+        scones: [
+            {
+                name: 'Lavender Scone',
+                img: '../img/products/lavender-scone-nobg.png',
+                description: 'A floral-infused scone that’s light and fragrant.',
+                calories: 300,
+                price: '$3.00',
+                ingredients: 'Flour, sugar, butter, lavender extract, milk, cream, baking powder',
+                features: 'Delicate lavender essence with a soft, fluffy texture'
+            },
+            {
+                name: 'Blueberry Scone',
+                img: '../img/products/blueberry-scone.jpg',
+                description: 'Fresh blueberries folded into a buttery scone.',
+                calories: 280,
+                price: '$2.75',
+                ingredients: 'Flour, sugar, butter, blueberries, milk, cream, baking powder',
+                features: 'Bursting with fresh blueberry flavor in every bite'
+            }
+        ],
+        muffins: [
+            {
+                name: 'Banana Nut Muffin',
+                img: '../img/products/banana-nut.jpg',
+                description: 'Banana and walnuts combine for a hearty, sweet muffin.',
+                calories: 330,
+                price: '$2.50',
+                ingredients: 'Bananas, flour, sugar, butter, walnuts, eggs, baking powder',
+                features: 'Moist and nutty with natural banana sweetness'
+            },
+            {
+                name: 'Pumpkin Spice Muffin',
+                img: '../img/products/pumpkin-spice.jpg',
+                description: 'Seasonal spices and pumpkin puree in a delicious muffin.',
+                calories: 310,
+                price: '$2.75',
+                ingredients: 'Pumpkin puree, flour, sugar, butter, eggs, cinnamon, nutmeg, baking powder',
+                features: 'Spiced with cinnamon and nutmeg for a warm, autumn flavor'
+            }
+        ],
+        breads: [
+            {
+                name: 'Sourdough Bread',
+                img: '../img/products/sourdough.jpg',
+                description: 'A tangy sourdough loaf with a crispy crust.',
+                calories: 150,
+                price: '$4.00',
+                ingredients: 'Flour, water, salt, natural yeast starter',
+                features: 'Naturally fermented with a crispy crust and a tangy flavor'
+            },
+            {
+                name: 'Baguette',
+                img: '../img/products/baguette.jpg',
+                description: 'Classic French baguette, perfect for sandwiches.',
+                calories: 180,
+                price: '$3.50',
+                ingredients: 'Flour, water, salt, yeast',
+                features: 'Crispy crust with a light and airy interior'
+            }
+        ]
+    };
+</script>
+<script>
+    // Display Products for Selected Category
+    if (selectedCategory && productsData[selectedCategory]) {
+        const categorySection = document.createElement('section');
+        categorySection.classList.add('product-category');
+        categorySection.innerHTML = `<h2>${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)}</h2>`;
+
+        const productsGrid = document.createElement('div');
+        productsGrid.classList.add('products-grid');
+
+        productsData[selectedCategory].forEach((product, index) => {
+            const productBox = document.createElement('div');
+            productBox.classList.add('product-item');
+            productBox.innerHTML = `
+                <img src="${product.img}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p class="product-description">${product.description}</p>
+                <div class="product-details">
+                    <span class="product-calories">Calories: ${product.calories}</span>
+                    <span class="product-price">${product.price}</span>
+                </div>
+                <button onclick="toggleDetails(${index})" class="learn-more-button">Learn More</button>
+                <div id="details-${index}" class="product-extra-details" style="display: none;">
+                    <p>Ingredients: ${product.ingredients || 'Not listed'}</p>
+                    <p>Features: ${product.features || 'A classic favorite!'}</p>
+                </div>
+            `;
+            productsGrid.appendChild(productBox);
+        });
+
+        categorySection.appendChild(productsGrid);
+        document.body.appendChild(categorySection);
+    }
+</script>
+<script>
+    function toggleDetails(index) {
+        const detailsSection = document.getElementById(`details-${index}`);
+        detailsSection.classList.toggle('collapsed');
+    }
+</script>
+<script>
+    function toggleDetails(index) {
+        const detailsSection = document.getElementById(`details-${index}`);
+        detailsSection.style.display = detailsSection.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+<script>
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+    });
+</script>
+<script>
+    // Function to Scroll to Top
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Show or Hide Back to Top Button on Scroll
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Adjust scroll value as needed
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
+</script>
+
+ <footer class="footer">
+        <p>&copy; 2024 Batter & Bloom | All rights reserved</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Layout */
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    padding-top: 70px; /* Adjust to match navbar height */
+}
+
+/* Navbar Styling */
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #AAB7A4; /* Yellow primary color */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-logo h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #A8BDA6; /* Green hover color */
+}
+
+/* Responsive Navbar Toggle for Mobile */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Contact Section */
+.contact-section {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Contact Form */
+.contact-form label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+    color: #5C5240;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+.contact-info h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #5C5240;
+    margin-bottom: 1rem;
+}
+.contact-info p {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+/* Contact Form Label Styling */
+.contact-form label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #5C5240;
+    margin: 0.5rem 0 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 1rem;
+}
+.submit-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #A8BDA6;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #AAB7A4;
+    color: #fff;
+    font-size: 0.9rem;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 1.5rem;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #AAB7A4;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}

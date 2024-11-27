@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Recipes | Batter & Bloom</title>
+    <link rel="stylesheet" href="../styles/special-recipes.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+    <nav class="navbar">
+    <div class="navbar-logo">
+        <a href="../index.html">
+        <h1>Batter & Bloom</h1>
+    </a>
+    </div>
+    <ul class="navbar-links">
+        <li><a href="contact.html">Get In Touch</a></li>
+        <li><a href="our-treats.html">Our Treats</a></li>
+        <li><a href="#locations">Locations</a></li>
+        <li><a href="special-recipes.html">Special Recipes</a></li>
+    </ul>
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+    </button>
+    
+</nav>
+
+    <!-- Main Section -->
+    <main>
+        <section class="recipes-list">
+            <h2>Our Special Recipes</h2>
+            <div class="recipe-grid">
+                <!-- Recipe Item -->
+                <div class="recipe-item" onclick="openRecipePopup('chocolateChipCookies')">
+                    <img src="../img/products/chocolate-chip.jpg" alt="Chocolate Chip Cookie">
+                    <h3>Chocolate Chip Cookies</h3>
+                </div>
+                 <div class="recipe-item" onclick="openRecipePopup('pumpkinSpiceMuffins')">
+                    <img src="../img/products/pumpkin-spice.jpg" alt="Pumpkin Spice">
+                    <h3>Pumpkin Spice Muffins</h3>
+                </div>
+                   <div class="recipe-item" onclick="openRecipePopup('lavenderScones')">
+                    <img src="../img/products/lavender-scone-nobg.png" alt="Lavender Scone">
+                    <h3>Lavender Scones</h3>
+                </div>
+                 <div class="recipe-item" onclick="openRecipePopup('peanutButterCookies')">
+                    <img src="../img/products/peanut-butter.jpg" alt="Peanut Butter Cookie">
+                    <h3>Peanut Butter Cookies</h3>
+                </div>
+                 <div class="recipe-item" onclick="openRecipePopup('lavenderHoneyLemonCookies')">
+                    <img src="../img/products/lavender-honey.webp" alt="Lavender Honey Lemon Cookie">
+                    <h3>Lavender Honey Lemon Cookies</h3>
+                </div>
+                <!-- Add more recipe items as needed -->
+            </div>
+        </section>
+    </main>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Batter & Bloom | All rights reserved</p>
+    </footer>
+
+    
+     <!-- Recipe Popup Container -->
+<div id="recipe-popup" class="recipe-popup">
+    <div class="popup-content">
+        <button class="close-button" onclick="closeRecipePopup()">×</button>
+        <h2 id="recipe-name">Recipe Name</h2>
+        <div class="recipe-info">
+            <span id="cook-time">Cook Time: -- mins</span>
+            <span id="servings">Servings: --</span>
+        </div>
+        <div class="recipe-ingredients">
+            <h4>Ingredients</h4>
+            <ul id="ingredients-list"></ul>
+        </div>
+        <div class="recipe-directions">
+            <h4>Directions</h4>
+            <ol id="directions-list"></ol>
+        </div>
+    </div>
+</div>
+<script src="../scripts/recipes.js"></script>
+<script>
+    const toggleButton = document.querySelector('.navbar-toggle');
+    const navbarLinks = document.querySelector('.navbar-links');
+
+    toggleButton.addEventListener('click', () => {
+        navbarLinks.classList.toggle('active');
+    });
+</script>
+</body>
+</html>

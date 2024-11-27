@@ -1,0 +1,560 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* General Styles */
+body {
+
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #4A4A4A;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+.hero-button, .view-products-button, .expand-button {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #AAB7A4; /* Yellow primary color */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-logo h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #A8BDA6; /* Green hover color */
+}
+
+/* Responsive Navbar Toggle for Mobile */
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.toggle-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+}
+
+/* Mobile View Styling */
+@media (max-width: 768px) {
+        .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #D4A373;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    /* Ensure contact info hides properly on mobile */
+    .contact-info {
+        display: none !important; /* Force hiding with !important */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('../img/bakery-bg.png');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+/* Hero Section Logo Styling for Blending Effect */
+.hero-logo {
+    max-width: 20%; /* Set logo size based on screen size */
+    height: auto;
+    opacity: 0.95; /* Slight transparency to blend with background */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); /* Soft shadow to lift it slightly */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    margin-bottom: 25px;
+}
+.hero-logo:hover {
+    opacity: 1; /* Removes transparency on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #FDF8EC;
+    
+
+}
+
+.hero-content p {
+    font-size: 1.0rem;
+    margin: 1rem 0;
+    color: #FFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+.hero-content h2{
+    background-color: rgba(0,0,0, 0.2);
+}
+.hero-button {
+    background-color: #A8BDA6;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 25px;
+    margin-bottom: ;
+
+}
+
+.hero-button:hover {
+    background-color: #D4A373;
+}
+
+/* About Section */
+
+/* Our Story Section */
+/* Backstory Section Styling */
+.backstory-section {
+    background-color: #f7f8fa; /* Light, soft background color for contrast */
+    padding: 2rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.backstory-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #5C5240; /* Warm color to match the theme */
+    margin-bottom: 1rem;
+}
+
+.backstory-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 1.2rem;
+}
+
+/* Highlighted Text Styling */
+.highlight {
+    font-weight: bold;
+    color: #A8BDA6; /* Soft green tone for emphasis */
+    background-color: rgba(248, 245, 237, 0.6); /* Light, soft background to stand out */
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+}
+
+/* Optional Divider */
+.backstory-section::before,
+.backstory-section::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background-color: #A8BDA6;
+    margin: 0.5rem auto 1.5rem auto;
+}
+
+.about {
+    padding: 2rem;
+    background-color: #FDF8EC;
+    text-align: center;
+    color: #333;
+}
+.about h2 {
+  
+    font-size: 4.5rem;
+    color: #A8BDA6;
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.story-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.icon {
+    font-size: 2rem;
+    color: #A8BDA6;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+}
+
+.story-item:hover .icon {
+    color: #D4A373;
+}
+
+.story-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.story-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+   
+}
+
+
+
+
+
+/* Products Section */
+.products {
+    padding: 2rem;
+    background-color: #fff;
+    color: #FDF8EC;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Minimum width per item */
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+.product-item {
+    position: relative;
+    padding: 1rem;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.product-item:hover {
+    border-color: #AAB7A4; /* Soft Sage Green or other accent color */
+}
+.product-item img {
+     width: 120px;
+    height: auto;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.product-info h3 {
+    font-size: 2.0rem;
+    color: #A8BDA6;
+    margin: 0;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0.3rem 0 0;
+    line-height: 1.4;
+   
+}
+.view-products-button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #fff;
+    border:1px solid #C3B1E1;
+    color: #C3B1E1;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-products-button:hover {
+    background-color: #A8BDA6;
+    transform: translateY(-2px);
+    color: #fff;
+}
+/* Visit Us Section */
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2rem;
+    background-color: #D7B8D6;
+    color: #4A4A4A;
+    text-align: center;
+    border-radius: 8px;
+    gap: 2rem;
+}
+.contact-info {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.contact-info .contact-address,
+.contact-info .contact-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.contact-info i {
+    color: #D4A373; /* Optional: Adds a touch of theme color to the icons */
+}
+
+.hours, .social-links {
+    margin-top: 1rem;
+}
+
+.hours h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hours-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hours-list li {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0.3rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.social-links {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #3E2C41;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #A8BDA6;
+}
+.extra-content {
+    display: none;
+    margin-top: 2rem;
+    color: #4A4A4A;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.fun-facts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-items: center; /* Center each item within the grid */
+}
+
+.fact-item {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #4A4A4A;
+}
+
+.fact-item i {
+    font-size: 1.5rem;
+    color: #A8BDA6;
+    margin-right: 0.8rem;
+}
+
+.fact-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.expand-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #D4A373;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.expand-button:hover {
+    background-color: #A8BDA6;
+}
+/* Our Craft Section */
+.our-craft {
+    
+    background-color: #FDF8EC;
+    text-align: center;
+    color: #333;
+}
+
+.our-craft h2 {
+    font-size: 2.5rem;
+    color: #A8BDA6;
+    margin-bottom: 1rem;
+}
+
+.craft-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.craft-step {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    max-width: 200px;
+}
+
+.craft-step img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.craft-step h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.craft-step p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Line Connector */
+.craft-steps::before {
+    content: '';
+    position: absolute;
+    top: 70%; /* Adjusts the vertical position to avoid overlaying images */
+    left: 5%;
+    right: 5%;
+    height: 4px;
+    background-color: #A8BDA6;
+    z-index: -1; /* Places line behind all elements */
+}
+
+.craft-step::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: -1.5rem;
+    font-size: 2rem; /* Increase or decrease to adjust arrow size */
+    color: #A8BDA6;
+}
+
+.craft-step:last-child::after {
+    content: '';
+}
+
+
+/* Footer */
+.footer {
+    background-color: #A8BDA6;
+    color: #FDF8EC;
+    text-align: center;
+    padding: 1rem;
+}
