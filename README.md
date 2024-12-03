@@ -28,15 +28,15 @@ Steps
 Clone the repository:
 
 bash<br>
-git clone https://github.com/your-username/batter-and-bloom.git
-cd batter-and-bloom
+git clone https://github.com/your-username/batter-and-bloom.git<br>
+cd batter-and-bloom<br>
 Open the index.html file in your browser:
 
 On most systems, you can simply double-click the file, or:
-bash
-open index.html   # macOS
-start index.html  # Windows
-xdg-open index.html  # Linux
+bash<br>
+open index.html   # macOS<br>
+start index.html  # Windows<br>
+xdg-open index.html  # Linux<br>
 
 Usage
 The website includes:
