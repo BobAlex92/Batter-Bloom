@@ -24,7 +24,6 @@
     <ul class="navbar-links">
         <li><a href="./pages/contact.html">Get In Touch</a></li>
         <li><a href="./pages/our-treats.html">Our Treats</a></li>
-        <li><a href="#locations">Locations</a></li>
         <li><a href="./pages/special-recipes.html">Special Recipes</a></li>
     </ul>
     <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -43,55 +42,91 @@
 </nav>
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
-            <img src="./img/batter-and-bloom-logo2.webp" alt="Batter & Bloom Logo" class="hero-logo">
-
-
-            <h2>Handcrafted treats inspired by nature’s beauty.</h2>
-            <br />
-            <a href="#about" class="hero-button">Discover Our Story</a>
-            <br/>
-         
-        </div>
-
-    </header>
-<section id="our-craft" class="our-craft">
-  
-    <div class="craft-steps">
-        <div class="craft-step">
-            <img src="img/fresh-ingredients.webp" alt="Fresh Ingredients">
-            <h3>Fresh Ingredients</h3>
-            <p>All ingredients are sourced from local farms to ensure quality and flavor.</p>
-        </div>
-        <div class="craft-step">
-            <img src="img/handcrafted-mix.webp" alt="Handcrafted Mix">
-            <h3>Handcrafted Mix</h3>
-            <p>Each batch is carefully mixed by hand to bring out the best flavors.</p>
-        </div>
-        <div class="craft-step">
-            <img src="img/artisan-baking.webp" alt="Artisan Baking">
-            <h3>Artisan Baking</h3>
-            <p>Baked to perfection using traditional artisan methods.</p>
-        </div>
-        <div class="craft-step">
-            <img src="img/final-touch.webp" alt="Final Touch">
-            <h3>Final Touch</h3>
-            <p>Each item is uniquely decorated for a beautiful presentation.</p>
-        </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-heading">Handcrafted Treats, Inspired by Nature</h1>
+        <p class="hero-description">Savor the beauty of nature through our artisanal baked goods, crafted with care and creativity.</p>
+        <a href="#backstory" class="hero-button">Discover Our Story</a>
     </div>
-</section>
+</header>
+
 <!-- Backstory Section --> 
-<section class="backstory-section">
+<section class="backstory-section" id="backstory">
     <div class="backstory-content">
-        <h2 class="backstory-heading">Our Story</h2>
         <p class="backstory-text">
             <span class="highlight">At Batter & Bloom, our journey began in a small, sunlit kitchen with a simple passion:</span> blending the beauty of nature with the art of baking. What started as a hobby of dyeing Easter eggs with garden herbs blossomed into a pursuit of flavor, color, and creativity. We believe that every treat deserves a touch of nature's charm and a baker's heart.
         </p>
-        <p class="backstory-text">
-            Today, Batter & Bloom is dedicated to bringing you handcrafted pastries inspired by the blooms, herbs, and pure ingredients around us. Each item is a celebration of natural beauty and slow-grown flavors, crafted to inspire wonder with every bite.
-        </p>
+        
     </div>
 </section>
+
+<section id="our-craft" class="our-craft">
+    <div class="craft-grid">
+        <div class="craft-step">
+            <img src="img/fresh-ingredients.webp" alt="Fresh Ingredients" class="craft-image">
+            <h3 class="craft-title">1. Fresh Ingredients</h3>
+            <p class="craft-text">All ingredients are sourced from local farms to ensure quality and flavor.</p>
+            <ul class="craft-highlights">
+                <li>Locally sourced and organic.</li>
+                <li>Seasonal for optimal freshness.</li>
+                <li>Supportive of sustainable farming.</li>
+            </ul>
+            <div class="craft-extra">
+                <i class="fas fa-seedling craft-icon"></i>
+                <p class="craft-quote">"Every great treat starts with the finest ingredients."</p>
+               
+            </div>
+        </div>
+        <div class="craft-step">
+            <img src="img/handcrafted-mix.webp" alt="Handcrafted Mix" class="craft-image">
+            <h3 class="craft-title">2. Handcrafted Mix</h3>
+            <p class="craft-text">Each batch is carefully mixed by hand to bring out the best flavors.</p>
+            <ul class="craft-highlights">
+                <li>Traditional mixing techniques.</li>
+                <li>Attention to texture and consistency.</li>
+                <li>Care in every blend.</li>
+            </ul>
+            <div class="craft-extra">
+                <i class="fas fa-blender craft-icon"></i>
+                <p class="craft-quote">"Mixing by hand, ensuring every batch tells a story."</p>
+                
+            </div>
+        </div>
+        <div class="craft-step">
+            <img src="img/artisan-baking.webp" alt="Artisan Baking" class="craft-image">
+            <h3 class="craft-title">3. Artisan Baking</h3>
+            <p class="craft-text">Baked to perfection using traditional artisan methods.</p>
+            <ul class="craft-highlights">
+                <li>Small-batch baking for quality.</li>
+                <li>Expertly monitored temperatures.</li>
+                <li>Traditional artisan methods.</li>
+            </ul>
+            <div class="craft-extra">
+                <i class="fas fa-bread-slice craft-icon"></i>
+                <p class="craft-quote">"Artisan baking is where precision meets passion."</p>
+               
+            </div>
+        </div>
+        <div class="craft-step">
+            <img src="img/final-touch.webp" alt="Final Touch" class="craft-image">
+            <h3 class="craft-title">4. Final Touch</h3>
+            <p class="craft-text">Each item is uniquely decorated for a beautiful presentation.</p>
+            <ul class="craft-highlights">
+                <li>Custom designs for every treat.</li>
+                <li>Attention to aesthetic details.</li>
+                <li>Visual perfection in every bite.</li>
+            </ul>
+            <div class="craft-extra">
+                <i class="fas fa-paint-brush craft-icon"></i>
+                <p class="craft-quote">"The final touch turns every treat into a masterpiece."</p>
+              
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
 
     <!-- About Section -->
    <section id="about" class="about">
@@ -143,7 +178,14 @@
     <button class="expand-button" onclick="toggleContent()">Read More</button>
 </section>
 
-
+<section class="backstory-section" id="backstory">
+    <div class="backstory-content">
+      <p class="backstory-text">
+            Today, Batter & Bloom is dedicated to bringing you handcrafted pastries inspired by the blooms, herbs, and pure ingredients around us. Each item is a celebration of natural beauty and slow-grown flavors, crafted to inspire wonder with every bite.
+        </p>
+        
+    </div>
+</section>
 
     <!-- Products Section -->
     <section class="products">
