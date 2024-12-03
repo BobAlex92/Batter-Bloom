@@ -54,12 +54,12 @@ This project serves as a proof of concept for integrating AI technologies into w
 ### **Usage:**
 The website includes:
 
--A home page with a navigation bar and modern design elements.
--Recipe information stored locally in a JavaScript file (recipes.js).
--Fully responsive layouts suitable for desktops and mobile devices.
--This site serves as an entry-level example, emphasizing simplicity and efficiency in web design.
+- A home page with a navigation bar and modern design elements.
+- Recipe information stored locally in a JavaScript file (recipes.js).
+- Fully responsive layouts suitable for desktops and mobile devices.
+- This site serves as an entry-level example, emphasizing simplicity and efficiency in web design.
 
 ### **Future Goals:**
--Add interactivity using JavaScript (e.g., search or filtering features for recipes).
--Expand content by integrating additional pages or components.
--Explore backend integration for dynamic content in advanced iterations.
+- Add interactivity using JavaScript (e.g., search or filtering features for recipes).
+- Expand content by integrating additional pages or components.
+- Explore backend integration for dynamic content in advanced iterations.
