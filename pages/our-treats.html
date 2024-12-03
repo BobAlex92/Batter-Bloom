@@ -22,7 +22,6 @@
     <ul class="navbar-links">
         <li><a href="contact.html">Get In Touch</a></li>
         <li><a href="./pages/our-treats.html">Our Treats</a></li>
-        <li><a href="#locations">Locations</a></li>
         <li><a href="special-recipes.html">Special Recipes</a></li>
     </ul>
     <button class="navbar-toggle" aria-label="Toggle navigation">
@@ -74,7 +73,12 @@
     <script>
     // Check URL for category parameter
     const urlParams = new URLSearchParams(window.location.search);
-    const selectedCategory = urlParams.get('category');
+    let selectedCategory = urlParams.get('category');
+
+    // Set a default category if none is selected
+    if (!selectedCategory) {
+        selectedCategory = 'cookies';
+        }
 
     // Placeholder Data for Products
      const productsData = {

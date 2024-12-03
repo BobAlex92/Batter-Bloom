@@ -8,8 +8,16 @@
 /* General Styles */
 body {
     font-family: 'Roboto', sans-serif; /* Body text for readability */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 
     color: #333;
+}
+
+main {
+    flex: 1;
 }
 h1, h2, h3 {
     font-family: 'Playfair Display', serif; /* Cursive for elegance */
@@ -41,6 +49,7 @@ h3 {
     padding: 1rem 2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    margin-bottom: 50px;
 }
 
 .navbar-logo h1 {
@@ -84,28 +93,6 @@ h3 {
     background-color: #fff;
 }
 
-/* Mobile View Styling */
-@media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background-color: #F5B14C;
-        width: 100%;
-        padding: 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
-}
-
 
 
 /* Treats Categories Section */
@@ -140,7 +127,7 @@ h3 {
 /* Category Grid */
 .categories-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
@@ -149,8 +136,8 @@ h3 {
 /* Category Item Styling */
 .category {
     position: relative;
-    width: 200px;
-    height: 250px;
+    width: 100px;
+    height: 150px;
     overflow: hidden;
     border-radius: 12px;
     background-color: #FDF8EC; /* Matches the theme without using green or yellow */
@@ -209,9 +196,9 @@ h3 {
 .product-item {
     width: 220px;
     padding: 1.5rem;
-    background-color: #FDF8EC; /* Light background to match the theme */
+    background-color: none; /* Light background to match the theme */
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    b
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -372,4 +359,27 @@ h3 {
     color: #FDF8EC;
     text-align: center;
     padding: 1rem;
+    margin-top: auto; /* Pushes footer to the bottom if content is short */
 }
+/* Mobile View Styling */
+@media (max-width: 768px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #F5B14C;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+}
+
