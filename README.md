@@ -27,7 +27,7 @@ Git (optional, for cloning the repository).
 Steps
 Clone the repository:
 
-bash
+bash<br>
 git clone https://github.com/your-username/batter-and-bloom.git
 cd batter-and-bloom
 Open the index.html file in your browser:
