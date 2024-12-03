@@ -32,7 +32,7 @@ git clone https://github.com/your-username/batter-and-bloom.git<br>
 cd batter-and-bloom<br>
 Open the index.html file in your browser:
 
-On most systems, you can simply double-click the file, or:
+On most systems, you can simply double-click the file, or:<br>
 bash<br>
 open index.html   # macOS<br>
 start index.html  # Windows<br>
