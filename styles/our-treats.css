@@ -133,34 +133,56 @@ h3 {
     margin-top: 2rem;
 }
 
-/* Category Item Styling */
+/* Category Styling */
 .category {
     position: relative;
-    width: 100px;
-    height: 150px;
+    width: 80%;
+    height: 100px; /* Adjusted height */
+    margin: 0 auto; /* Centers horizontally */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px; /* Optional rounded corners */
     overflow: hidden;
-    border-radius: 12px;
-    background-color: #FDF8EC; /* Matches the theme without using green or yellow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
     cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+
 }
 
-
-
-.category h3 {
+/* Add an overlay effect */
+.category::before {
+    content: "";
     position: absolute;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-    background: #4A4A4A; /* Transparent overlay */
-    color: #fff;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensures it's beneath the text */
 }
+
+/* Category Hover Effects */
+.category:hover {
+    transform: scale(1.02); /* Slight zoom */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for hover effect */
+}
+
+/* Category Text Styling */
+.category h3 {
+    position: relative; /* Ensures it's above the overlay */
+    z-index: 2;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+ 
+}
+
 .category img {
     width: 100%;
     height: 100%;
@@ -380,6 +402,13 @@ h3 {
 
     .navbar-toggle {
         display: flex;
+    }
+     .category {
+        height: 120px; /* Reduce height for smaller screens */
+    }
+
+    .category h3 {
+        font-size: 1.5rem;
     }
 }
 

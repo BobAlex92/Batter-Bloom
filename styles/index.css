@@ -96,7 +96,7 @@ h3 {
 .hero {
     position: relative;
     background: url('../img/bakery-bg.png') no-repeat center center/cover;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,10 +234,17 @@ h3 {
     text-align: center;
     color: #333;
 }
+.about h3 {
+    font-size: 2rem;
+    color: #D4A373; /* Warm goldenrod for a welcoming feel */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    font-family: 'Playfair Display', serif;
+}
+
 .about h2 {
-  
     font-size: 2.5rem;
-    color: #A8BDA6;
+    color: #AAB7A4; /* Soft sage green */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .story-content {
@@ -474,13 +481,24 @@ h3 {
     background-color: #A8BDA6;
 }
 //* Our Craft Section */
-.our-craft {
-    background-color: #FDF8EC;
-    padding: 3rem 1.5rem;
-    text-align: center;
-    color: #333;
+.our-craft .craft-title {
+    font-size: 1.8rem;
+    color: #D4A373; /* Goldenrod */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    font-family: 'Playfair Display', serif;
 }
 
+.our-craft .section-title {
+    font-size: 2.5rem;
+    color: #AAB7A4; /* Muted Sage Green */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adds elegance */
+}
+.about h3:hover, .our-craft .craft-title:hover {
+    color: #5C5240; /* Darker earthy tone */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transform: scale(1.05); /* Slight zoom */
+    transition: all 0.3s ease-in-out;
+}
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
